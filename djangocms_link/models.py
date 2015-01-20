@@ -11,7 +11,7 @@ class Link(CMSPlugin):
     A link to an other page or to an external website
     """
     name = models.CharField(_("name"), max_length=256)
-    url = models.URLField(_("link"), blank=True, null=True)
+    url = models.URLField(_("link"), max_length=600, blank=True, null=True)
     page_link = models.ForeignKey(
         Page,
         verbose_name=_("page"),
